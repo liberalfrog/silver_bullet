@@ -17,7 +17,7 @@
 
 指定の数の画像
 
-まだまだ未完成ですがこれから実装をしていきます。
+学習用に作っているので完成度は低いし、まだまだ未完成ですがこれから実装をしていきます。
 # Description
 silver_bulletは文章の分析を２つのタグに分け、fast_textで作ったword2vecのモデルを使いつつ柔軟に適切なタグの画像を探します。
 
@@ -32,3 +32,24 @@ silver_bulletは文章の分析を２つのタグに分け、fast_textで作っ�
 「楽しい」、「わくわく」、「こわい」
 
 抽象タグは事前にタグでラベル付けしたデータセットを用意し、それをfasttextでラベル付けのモデルを作成する。それを元にタイトル全体をラベル付けして、それの割合を元にタグを取り出します。
+
+# Requirement
+python3（できるだけ最近のものでローカルでは3.7.0で行った）
+
+Janome==0.3.9
+
+gensim==3.7.3
+
+fasttextを自分でpipビルドしてください。
+# Usage
+
+タイトルに適した画像パスとタグを返します。
+
+python  fromSubjectToSuitImage.py -c　タイトル
+
+画像パスとタグの組み合わせを登録する。
+
+python  fromSubjectToSuitImage.py -t imagePath tag1 tag2 tag3 tag4
+
+tag1 tag2 tag3を登録
+python  classfiedFigurativeTag.py -t tag1 tag2 tag3　
