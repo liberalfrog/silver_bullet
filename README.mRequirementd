@@ -52,4 +52,5 @@ python  fromSubjectToSuitImage.py -c　タイトル
 python  fromSubjectToSuitImage.py -t imagePath tag1 tag2 tag3 tag4
 
 tag1 tag2 tag3を登録
+
 python  classfiedFigurativeTag.py -t tag1 tag2 tag3　
