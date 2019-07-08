@@ -18,6 +18,7 @@
 指定の数の画像
 
 学習用に作っているので完成度は低いし、まだまだ未完成ですがこれから実装をしていきます。
+#つかきアタ
 # Description
 silver_bulletは文章の分析を２つのタグに分け、fast_textで作ったword2vecのモデルを使いつつ柔軟に適切なタグの画像を探します。
 
@@ -34,20 +35,14 @@ silver_bulletは文章の分析を２つのタグに分け、fast_textで作っ�
 抽象タグは事前にタグでラベル付けしたデータセットを用意し、それをfasttextでラベル付けのモデルを作成する。それを元にタイトル全体をラベル付けして、それの割合を元にタグを取り出します。
 
 # Requirement
-python3（できるだけ最近のものでローカルでは3.7.0で行った）
-
-Janome==0.3.9
-
-gensim==3.7.3
-
-fasttextを自分でpipビルドしてください。
-
-fasttextで学習済みの単語モデルと抽象タグをラベル付けできるモデル
+dockerfileをbuildしてね
 # Usage
 
-タイトルに適した画像パスとタグを返します。
+ルートディレクトリにあるスクリプトをpython3で実行してください
 
-python  fromSubjectToSuitImage.py -c　タイトル
+python3 converter.py 
+
+python3 register.py -c　画像　タグ1 タグ２　タグ３　タグ４
 
 画像パスとタグの組み合わせを登録する。
 
