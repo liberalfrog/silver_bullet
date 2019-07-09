@@ -46,6 +46,6 @@ python3 converter.py
 
 画像パスとタグの組み合わせを登録する。
 
-python3 register.py -c　画像　タグ1 タグ２　タグ３　タグ４
+python3 register.py -c　画像パス　タグ1 タグ２　タグ３　タグ４
 
 モデルが重いので現状ではgitにあげてません
