@@ -34,6 +34,8 @@ silver_bulletは文章の分析を２つのタグに分け、fast_textで作っ�
 
 抽象タグは事前にタグでラベル付けしたデータセットを用意し、それをfasttextでラベル付けのモデルを作成する。それを元にタイトル全体をラベル付けして、それの割合を元にタグを取り出します。
 
+他の手法も試してみます
+
 # Requirement
 dockerfileをbuildしてね
 # Usage
@@ -42,12 +44,8 @@ dockerfileをbuildしてね
 
 python3 converter.py 
 
-python3 register.py -c　画像　タグ1 タグ２　タグ３　タグ４
-
 画像パスとタグの組み合わせを登録する。
 
-python  fromSubjectToSuitImage.py -t imagePath tag1 tag2 tag3 tag4
+python3 register.py -c　画像　タグ1 タグ２　タグ３　タグ４
 
-tag1 tag2 tag3を登録
-
-python  classfiedFigurativeTag.py -t tag1 tag2 tag3　
+モデルが重いので現状ではgitにあげてません
