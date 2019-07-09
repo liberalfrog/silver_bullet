@@ -19,8 +19,19 @@ def readTagData(path):
 #別れた文字列に近い文字を持ってくる
 def classfiedFigure(splitedWords):
     print(splitedWords)
-    model = gensim.models.KeyedVectors.load_word2vec_format('models/ja.text8.model.vec')
+    
+
+    modelsPath = './models'
+    paths = []
+
+    for filename in os.listdir(modelsPath):
+        if os.path.isfile(os.path.join(modelsPath, filename)):
+            paths.append(filename)
+    print(paths)    
+
+    model = gensim.models.KeyedVectors.load_word2vec_format('models/'+paths[0])
     wordDic={}
+
     for word in splitedWords.split():
         wordDic[word] = model.most_similar(word)
     return wordDic
